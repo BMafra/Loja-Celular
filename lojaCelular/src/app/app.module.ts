@@ -9,7 +9,9 @@ import { CarrinhoComponent } from './produtos/carrinho/carrinho.component';
 import { HomeComponent } from './produtos/home/home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent}, 
+  {path: 'login', component: TelaLoginComponent}, 
+  {path: 'carrinho', component: CarrinhoComponent}
 ]
 
 @NgModule({

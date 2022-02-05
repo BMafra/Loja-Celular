@@ -15,6 +15,8 @@ header {
 
 .titulo {
     margin: 20px;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .botoes {
@@ -26,6 +28,7 @@ button {
     height: 40px;
     background-color: white;
     color: #836FFF;
+    font-weight: 600;
     border-radius: 5px;
     border: none;
     margin-right: 40px;

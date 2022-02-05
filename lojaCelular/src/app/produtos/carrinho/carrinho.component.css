@@ -1,0 +1,35 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'candara';
+}
+
+header {
+    background-color: #826fff9c;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo {
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.botoes {
+    display: flex;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    color: #836FFF;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    margin-right: 40px;
+}
