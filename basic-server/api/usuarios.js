@@ -1,7 +1,30 @@
+inserirRota('/login', function(dados, resposta) {
+    console.log(dados);
+
+    database(`SELECT * FROM USER WHERE NICKNAME = "${dados.nickname}" AND PASSWORD = "${dados.password}" LIMIT 1`)
+        .then(result => {
+            console.log('result:', result);
+            resposta({ user: result[0] });
+        }).catch(erro => {
+
+            resposta({ erro: 'Erro ao buscar o usuário!' });
+        });
+
+});
+
+
 inserirRota('/buscar_usuario', function(dados, resposta) {
     console.log(dados);
 
-    resposta({ ok: "Requisão efetuada com sucesso" });
+    database('SELECT * FROM USER')
+        .then(result => {
+
+            resposta({ list: result });
+        }).catch(erro => {
+
+            resposta({ message: 'Erro ao inserir o usuário!' });
+        });
+
 });
 
 inserirRota('/criar_usuario', function name(dados, resposta) {
@@ -30,5 +53,21 @@ inserirRota('/criar_usuario', function name(dados, resposta) {
             resposta({ message: 'Erro ao inserir o usuário!' });
         });
 
-
 })
+
+// fetch('/api/buscar_usuario', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         nome: 'sim',
+//         nickname: 'sim'
+//     }),
+//     headers: {
+//         'Content-Type': 'application/json'
+//     }
+// }).then(function (result){
+//     return result.json();
+// }).then(function (dados){ 
+//     console.log(dados);
+// }).catch(function (erro){
+//     console.log(erro)
+// });

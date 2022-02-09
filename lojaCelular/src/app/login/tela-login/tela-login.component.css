@@ -37,7 +37,7 @@
     font-size: 35px;
     font-weight: 800;
     font-family: 'candara';
-    color: #836FFF;
+    color: #826fffac;
 }
 
 .main {
@@ -83,6 +83,6 @@
     border-radius: 10px;
     border: none;
     color: white;
-    background-color: #836FFF;
+    background-color: #826fffac;
     font-weight: 500;
 }
