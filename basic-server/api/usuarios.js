@@ -71,3 +71,9 @@ inserirRota('/criar_usuario', function name(dados, resposta) {
 // }).catch(function (erro){
 //     console.log(erro)
 // });
+
+inserirRota('fazerlogin', function(dados, resposta) {
+
+    database('SELECT')
+
+})

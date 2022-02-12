@@ -5,7 +5,7 @@ const db = new sqlite3.Database('./database.db', (err) => {
     if (err) {
         return console.error(err.message);
     }
-    console.log('Connected to the in-memory SQlite database.');
+    console.log('Connected to the in-memory SQlite dsadsada.');
 });
 const app = express();
 const route = express.Router();
@@ -15,8 +15,11 @@ console.clear();
 
 
 db.serialize(() => {
+    console.log('dasdsa')
+
     function query(query) {
         return new Promise((resolve, reject) => {
+            console.log(query)
             let type;
             if (query.startsWith('CREATE TABLE')) type = 'RUN';
             if (query.startsWith('INSERT INTO')) type = 'RUN';
