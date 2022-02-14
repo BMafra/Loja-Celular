@@ -17,13 +17,14 @@ header {
     margin: 20px;
     font-size: 40px;
     font-weight: 700;
+    font-family: 'Graffiti font';
 }
 
 .botoes {
     display: flex;
 }
 
-button {
+.botoes button {
     width: 90px;
     height: 40px;
     background-color: white;
@@ -32,4 +33,49 @@ button {
     border-radius: 5px;
     border: none;
     margin-right: 40px;
+}
+
+.botoesPaginas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: #826fff9c;
+    border-top: solid 2px white;
+}
+
+.botoesPaginas button {
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+}
+
+footer {
+    background-color: #826fff62;
+    width: 100%;
+    height: 20%;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+
+img {
+    margin: 10px;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.761);
+    background-color: #826fff5d;
 }
