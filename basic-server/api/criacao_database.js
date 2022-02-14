@@ -1,25 +1,5 @@
-database(`CREATE TABLE IF NOT EXISTS TESTE (
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    NOME varchar(30),
-    NUMERO int
-    )`).then(result => {
-    console.log('Tabela TESTE criada com sucesso');
-}).catch(erro => {
-    console.log('Erro na criação da tabela TESTE');
-});
-
 database(`CREATE TABLE IF NOT EXISTS PESSOA ( 
-    CPF CHAR(11) PRIMARY KEY,
-    NOME VARCHAR(45) NOT NULL,
-    IDADE INT
-    )`).then(result => {
-    console.log('Tabela PESSOA criada com sucesso');
-}).catch(erro => {
-    console.log('Erro na criação da tabela USER');
-});
-
-database(`CREATE TABLE IF NOT EXISTS PESSOA ( 
-    CPF CHAR(11) PRIMARY KEY,
+    CPF CHAR(11) NOT NULL PRIMARY KEY,
     NOME VARCHAR(45) NOT NULL,
     IDADE INT
     )`).then(result => {
@@ -29,7 +9,7 @@ database(`CREATE TABLE IF NOT EXISTS PESSOA (
 });
 
 database(`CREATE TABLE IF NOT EXISTS CLIENTE (
-    CODIGO INT PRIMARY KEY,
+    CODIGO INT AUTO_INCREMENT PRIMARY KEY,
     USER VARCHAR(45),
     EMAIL VARCHAR(100),
     SENHA VARCHAR(45),
@@ -39,6 +19,40 @@ database(`CREATE TABLE IF NOT EXISTS CLIENTE (
     console.log('Tabela CLIENTE criada com sucesso');
 }).catch(erro => {
     console.log('Erro na criação da tabela CLIENTE');
+});
+
+database(`CREATE TABLE IF NOT EXISTS MARCA (
+    CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(45) NOT NULL
+)`).then(result => {
+    console.log('Tabela MARCA criada com sucesso');
+}).catch(erro => {
+    console.log('Erro na criação da tabela MARCA');
+});
+
+database(`CREATE TABLE IF NOT EXISTS PRODUTO (
+    CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    NOME VARCHAR(45) NOT NULL,
+    PRECO DOUBLE NOT NULL,
+    MARCA_CODIGO INT NOT NULL,
+    FOREIGN KEY (MARCA_CODIGO) REFERENCES MARCA(CODIGO) ON UPDATE CASCADE ON DELETE CASCADE
+)`).then(result => {
+    console.log('Tabela PRODUTO criada com sucesso');
+}).catch(erro => {
+    console.log('Erro na criação da tabela PRODUTO');
+});
+
+database(`CREATE TABLE IF NOT EXISTS ENDERECO (
+    CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    PAIS VARCHAR(45) NOT NULL,
+    ESTADO VARCHAR(45) NOT NULL,
+    CIDADE VARCHAR(45) NOT NULL,
+    BAIRRO VARCHAR(45) NOT NULL,
+    NUMERO INT NOT NULL
+)`).then(result => {
+    console.log('Tabela ENDERECO criada com sucesso');
+}).catch(erro => {
+    console.log('Erro na criação da tabela ENDERECO');
 });
 
 // database(`INSERT INTO PESSOA VALUES ('12345678910', 'Bruna Mafra', 17), ('11400200520', 'Camilly Pessotti', '16'), 
