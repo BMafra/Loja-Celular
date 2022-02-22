@@ -55,10 +55,36 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
     console.log('Erro na criação da tabela ENDERECO');
 });
 
+// database(`INSERT INTO ENDERECO VALUES (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Jaragua 99', 50), 
+// (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Rio da Luz', 110), (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Tifa Martins', 847),
+// (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'São Luiz', 404)
+// `).then(result => {
+//     console.log('DADOS NA TABELA ENDERECO INSERIDOS');
+// }).catch(erro => {
+//     console.log('ERRO AO COLOCAR OS DADOS NA TABELA ENDERECO');
+// });
+
 // database(`INSERT INTO PESSOA VALUES ('12345678910', 'Bruna Mafra', 17), ('11400200520', 'Camilly Pessotti', '16'), 
 // ('98765432108', 'João Henrique' , 17),('36925814709', 'Diego Planinscheck', 17)
-// )`).then(result => {
+// `).then(result => {
 //     console.log('DADOS NA TABELA PESSOA INSERIDOS');
 // }).catch(erro => {
 //     console.log('ERRO AO COLOCAR OS DADOS NA TABELA PESSOA');
+// });
+
+// database(`INSERT INTO MARCA VALUES (null, 'LG'), (null, 'Apple'), (null, 'Motorola'), 
+// (null, 'Samsung'), (null, 'Xiaomi')
+// `).then(result => {
+//     console.log('DADOS NA TABELA MARCA INSERIDOS');
+// }).catch(erro => {
+//     console.log('ERRO AO COLOCAR OS DADOS NA TABELA MARCA');
+// });
+
+// database(`INSERT INTO CLIENTE VALUES (null, 'bamafra', 'bruna@gmail.com', 'bamafra', 1), 
+// (null, 'camilly', 'camilly@gmail.com', 'camilly', 2), (null, 'jao', 'joao@gmail.com', 'jao', 3), 
+// (null, 'diego', 'diego@gmail.com', 'diego', 4)
+// `).then(result => {
+//     console.log('DADOS NA TABELA CLIENTE INSERIDOS');
+// }).catch(erro => {
+//     console.log('ERRO AO COLOCAR OS DADOS NA TABELA CLIENTE');
 // });

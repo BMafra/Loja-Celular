@@ -13,13 +13,13 @@ inserirRota('/login', function(dados, resposta) {
 });
 
 
-inserirRota('/buscar_usuario', function(dados, resposta) {
+inserirRota('/cliente', function(dados, resposta) {
     console.log(dados);
 
-    database('SELECT * FROM USER')
+    database('SELECT * FROM cliente')
         .then(result => {
 
-            resposta({ list: result });
+            resposta(result);
         }).catch(erro => {
 
             resposta({ message: 'Erro ao inserir o usuário!' });

@@ -10,7 +10,7 @@
                     <img src="./assets/account.png" style="width: 20px;height: 20px; ">
 
 
-                    <input type="text" placeholder="Usuário">
+                    <input [(ngModel)]='user' type="text" placeholder="Usuário">
                 </div>
             </div>
 
@@ -18,7 +18,7 @@
                 <div class="div-inputs">
                     <img src="./assets/cadeado.png" style="width: 20px;height: 20px; ">
 
-                    <input type="password" placeholder="Senha">
+                    <input [(ngModel)]='password' type="password" placeholder="Senha">
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
             </div>
 
             <div class="buttons">
-                <button>LOGIN COM O GOOGLE</button>
+                <button (click)="socialSignIn('google')">LOGIN COM O GOOGLE</button>
             </div>
 
             <div class="buttons">

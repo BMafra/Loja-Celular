@@ -8,10 +8,10 @@ export class UsuariosService {
 
   constructor() { }
 
-  buscarUsurios (){
+  buscarClientes (){
     return new Promise((resolvido, rejeitado)=> {
 
-      fetch('/api/buscar_usuario', {
+      fetch('/api/cliente', {
         method:'POST', 
         headers: {
           'Content-Type': 'application/json'
