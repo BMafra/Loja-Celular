@@ -20,7 +20,9 @@ header {
     border-radius: 15px;
     border: none;
     padding: 7px;
+    padding-left: 10px;
     outline: none;
+    text-align: center;
 }
 
 .botoes {
