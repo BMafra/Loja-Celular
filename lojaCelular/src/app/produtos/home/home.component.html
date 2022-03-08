@@ -4,7 +4,12 @@
 
 <body>
     <header>
-        <div class="titulo">bam</div>
+        <div class="logo">
+            <img src="./assets/logo.png" style="height: 230px; width: 250px;">
+        </div>
+        <div class="filtro">
+            <input type="text" placeholder="Pesquise a marca aqui!">
+        </div>
         <div class="botoes">
             <div>
                 <button (click)='carrinho()'>CARRINHO</button>
@@ -15,12 +20,25 @@
         </div>
     </header>
     <main>
-        <div class="botoesPaginas">
-            <button><img src="./assets/lg.png" style="height: 40px; width: 40px;"></button>
-            <button><img src="./assets/maca.png" style="height: 40px; width: 40px;"></button>
-            <button><img src="./assets/motorola.png" style="height: 40px; width: 40px;"></button>
-            <button><img src="./assets/samsung.png" style="height: 40px; width: 40px;"></button>
-            <button><img src="./assets/xiaomi.png" style="height: 40px; width: 40px;"></button>
+        <div class="produtos">
+            <div class="linhaProdutos">
+                <div class="produto">
+                    <img src="./assets/iPhone SE.jpg" style="width: 220px;">
+                    <div class="infos">
+                        <h2>iPhone SE </h2>
+                        <p>R$</p>
+                        <button>Carrinho</button>
+                    </div>
+                </div>
+                
+                <div class="produto">
+                    <img src="./assets/iPhone 13 Pro Max.jfif" style="width: 220px;">
+                    <div class="infos">
+                        <h2>iPhone 13 Pro Max</h2>
+                        <p>R$</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

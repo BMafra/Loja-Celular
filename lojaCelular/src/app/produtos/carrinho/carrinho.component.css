@@ -13,11 +13,13 @@ header {
     justify-content: space-between;
 }
 
-.titulo {
-    margin: 20px;
-    font-size: 40px;
-    font-weight: 700;
-    font-family: 'Graffiti font';
+.filtro input {
+    height: 20px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    padding: 7px;
+    outline: none;
 }
 
 .botoes {
@@ -35,26 +37,17 @@ header {
     margin-right: 40px;
 }
 
-.botoesPaginas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70px;
-    background-color: #826fff9c;
-    border-top: solid 2px white;
-}
-
-.botoesPaginas button {
-    background-color: transparent;
-    border: none;
-    margin: 10px;
-}
-
 footer {
     background-color: #826fff62;
     width: 100%;
     height: 20%;
+}
+
+.titulo {
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Graffiti font';
 }
 
 .container1 {

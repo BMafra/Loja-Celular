@@ -55,6 +55,17 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
     console.log('Erro na criação da tabela ENDERECO');
 });
 
+// database(`INSERT INTO PRODUTO VALUES (null, 'iPhone 13 Pro Max', 9450.10, 2), (null, 'iPhone SE', 2700.00, 2),
+// (null, 'K41s', 850.15, 1), (null, 'K61', 1250.30, 1),
+// (null, 'E7', 899.90, 3), (null, 'G20', 1200.45, 3), 
+// (null, 'S21', 3599.10, 4), (null, 'Note 20', 5118.90, 4),
+// (null, 'MI 11', 3100, 5), (null, 'Redmi Note 8', 1500.90, 5)
+// `).then(result => {
+//     console.log('DADOS NA TABELA PRODUTO INSERIDOS');
+// }).catch(erro => {
+//     console.log('ERRO AO COLOCAR OS DADOS NA TABELA PRODUTO');
+// });
+
 // database(`INSERT INTO ENDERECO VALUES (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Jaragua 99', 50), 
 // (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Rio da Luz', 110), (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'Tifa Martins', 847),
 // (null, 'Brasil', 'SC', 'Jaraguá do Sul', 'São Luiz', 404)
