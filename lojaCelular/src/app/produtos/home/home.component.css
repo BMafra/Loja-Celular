@@ -56,11 +56,11 @@ header {
 }
 
 .produto button{
-    width: 70px;
+    width: 80px;
     margin: 5px;
     padding: 7px;
     color: white;
-    background-color: #7864faaf;
+    background-color: #7864fa88;
     border-radius: 7px;
     border: none;
 }
