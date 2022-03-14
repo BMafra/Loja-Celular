@@ -21,22 +21,11 @@
     </header>
     <main>
         <div class="produtos">
-            <div class="linhaProdutos">
-                <div class="produto">
-                    <img src="./assets/iPhone SE.jpg" style="width: 220px;">
-                    <div class="infos">
-                        <h2>iPhone SE </h2>
-                        <p>R$ </p>
-                        <button>Carrinho</button>
-                    </div>
-                </div>
-                
-                <div class="produto">
-                    <img src="./assets/iPhone 13 Pro Max.jfif" style="width: 220px;">
-                    <div class="infos">
-                        <h2>iPhone 13 Pro Max</h2>
-                        <p>R$ </p>
-                    </div>
+            <div *ngFor="let produto of listaProduto" class="produto">
+                <div class="infos">
+                    <h2> {{produto.NOME}} </h2>
+                    <p>R$ {{produto.PRECO}}</p>
+                    <button>Carrinho</button>
                 </div>
             </div>
         </div>

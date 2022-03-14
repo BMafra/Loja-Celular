@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router'
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
 @Component({
@@ -9,11 +10,27 @@ import { Routes, RouterModule, Router } from '@angular/router'
 })
 export class HomeComponent implements OnInit {
 
+  listaProduto = []
+
   constructor(
-    private router: Router
+    private router: Router,
+    private usuariosService: UsuariosService
   ) { }
 
   ngOnInit() {
+    this.usuariosService.buscarProdutos()
+    .then((resultado: any) => {
+      console.log(" WRGESVDAXZ",resultado)
+    })
+    // .then((resultado: any) => {
+    //   console.log("aaaa",resultado)
+      // resultado.find(valorResultado => {
+      //   this.listaProduto.push(valorResultado)
+      // })
+    // })
+
+    // console.log(this.listaProduto)
+
   }
 
   carrinho(){

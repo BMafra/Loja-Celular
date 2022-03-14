@@ -23,5 +23,18 @@ export class UsuariosService {
     })
   }
 
-  
+  buscarProdutos(){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/ver_produtos', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then (resultado => resultado.json())
+        .then(resolvido => resolve(resolvido))
+        .catch(rejeitado);
+    })
+  }
+
+
 }
