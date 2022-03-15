@@ -1,5 +1,5 @@
 inserirRota('/ver_produtos', function(dados, respostas) {
-    database('SELECT * FROM PRODUTO')
+    database('SELECT * FROM produto')
         .then(result => {
             respostas(result)
         }).catch(erro => {

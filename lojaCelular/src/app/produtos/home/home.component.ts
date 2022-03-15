@@ -10,8 +10,8 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class HomeComponent implements OnInit {
 
-  listaProduto = []
-
+  listaProduto = [ ]
+ 
   constructor(
     private router: Router,
     private usuariosService: UsuariosService
@@ -22,14 +22,14 @@ export class HomeComponent implements OnInit {
     .then((resultado: any) => {
       console.log(" WRGESVDAXZ",resultado)
     })
-    // .then((resultado: any) => {
-    //   console.log("aaaa",resultado)
-      // resultado.find(valorResultado => {
-      //   this.listaProduto.push(valorResultado)
-      // })
-    // })
+    .then((resultado: any) => {
+      console.log("aaaa",resultado)
+      resultado.find(valorResultado => {
+        this.listaProduto.push(valorResultado)
+      })
+    })
 
-    // console.log(this.listaProduto)
+    console.log(this.listaProduto)
 
   }
 
