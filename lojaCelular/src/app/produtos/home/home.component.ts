@@ -10,7 +10,11 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class HomeComponent implements OnInit {
 
-  listaProduto = [ ]
+
+  nome = ''
+  preco = '';
+
+  listaProduto = [];
  
   constructor(
     private router: Router,
@@ -20,16 +24,23 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.usuariosService.buscarProdutos()
     .then((resultado: any) => {
-      console.log(" WRGESVDAXZ",resultado)
+      console.log("WRGESVDAXZ",resultado)
+      for(let i = 0; i < resultado.length; i++){
+        let teste = {
+          nome: resultado[i].NOME,
+          preco: resultado[i].PRECO
+        }
+        console.log("teste: ", teste)
+        this.listaProduto.push(teste);
+      }
     })
-    .then((resultado: any) => {
-      console.log("aaaa",resultado)
-      resultado.find(valorResultado => {
-        this.listaProduto.push(valorResultado)
-      })
-    })
+    // .then((resultado: any) => {
+    //   console.log("aaaa",resultado)
+    //   resultado.find(valorResultado => {
+    //     this.listaProduto.push(valorResultado)
+    //   })
+    // })
 
-    console.log(this.listaProduto)
 
   }
 
