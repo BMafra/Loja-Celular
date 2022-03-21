@@ -34,13 +34,6 @@ export class HomeComponent implements OnInit {
         this.listaProduto.push(teste);
       }
     })
-    // .then((resultado: any) => {
-    //   console.log("aaaa",resultado)
-    //   resultado.find(valorResultado => {
-    //     this.listaProduto.push(valorResultado)
-    //   })
-    // })
-
 
   }
 
@@ -50,6 +43,12 @@ export class HomeComponent implements OnInit {
 
   login(){
     this.router.navigate(['login']);
+  }
+
+  verProduto(i){
+    this.router.navigate(['produto']);
+
+    
   }
 
 }

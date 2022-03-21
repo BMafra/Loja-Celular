@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { CarrinhoComponent } from './produtos/carrinho/carrinho.component';
 import { HomeComponent } from './produtos/home/home.component';
+import { TelaProdutoComponent } from './produtos/tela-produto/tela-produto.component';
 
 // import {
 //   SocialLoginModule,
@@ -17,7 +18,8 @@ import { HomeComponent } from './produtos/home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: TelaLoginComponent },
-  { path: 'carrinho', component: CarrinhoComponent }
+  { path: 'carrinho', component: CarrinhoComponent},
+  { path: 'produto', component: TelaProdutoComponent}
 ]
 
 
@@ -40,7 +42,8 @@ const routes: Routes = [
     AppComponent,
     TelaLoginComponent,
     CarrinhoComponent,
-    HomeComponent
+    HomeComponent,
+    TelaProdutoComponent
   ],
   imports: [
     BrowserModule,

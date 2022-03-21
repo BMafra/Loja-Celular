@@ -21,7 +21,7 @@
     </header>
     <main>
         <div class="produtos">
-            <div *ngFor="let teste of listaProduto" class="produto">
+            <div *ngFor="let teste of listaProduto; let i of index" (click)="verProduto(i)" class="produto">
                 <div class="infos">
                     <h2> {{teste.nome}} </h2>
                     <p>R$ {{teste.preco}}</p>

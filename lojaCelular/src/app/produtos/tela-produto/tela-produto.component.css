@@ -1,0 +1,76 @@
+body {
+    width: 100vw;
+    font-family: 'candara';
+    background-color: rgb(241, 241, 241);
+}
+
+header {
+    background-color: #826fff9c;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtro input {
+    height: 20px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    padding: 7px;
+    padding-left: 10px;
+    outline: none;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes button {
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    color: #836FFF;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    margin-right: 40px;
+}
+
+footer {
+    background-color: #826fff62;
+    width: 100%;
+    height: 20%;
+}
+
+.titulo {
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Graffiti font';
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    width: 100%;
+}
+
+img {
+    margin: 10px;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 100%;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.761);
+    background-color: #826fff5d;
+}

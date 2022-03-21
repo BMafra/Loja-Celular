@@ -59,13 +59,25 @@ header {
 }
 
 .produto button {
-    width: 80px;
+    width: 100px;
+    height: 40px;
     margin: 5px;
     padding: 7px;
     color: white;
     background-color: #7864fa88;
     border-radius: 7px;
     border: none;
+}
+
+.produto button:hover {
+    width: 100px;
+    height: 40px;
+    padding: 7px;
+    background-color: #ffffff;
+    color: #7864fa88;
+    font-weight: 750;
+    border-radius: 7px;
+    border: solid 2px #7864fa88;
 }
 
 .infos {

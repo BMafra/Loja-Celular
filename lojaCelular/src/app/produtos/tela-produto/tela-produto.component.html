@@ -1,3 +1,47 @@
-<p>
-  tela-produto works!
-</p>
+<head>
+    <link href="http://fonts.cdnfonts.com/css/graffiti-font" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.png" style="height: 230px; width: 250px;">
+        </div>
+        <div class="filtro">
+            <input type="text" placeholder="Pesquise aqui!">
+        </div>
+        <div class="botoes">
+            <div>
+                <button (click)='carrinho()'>CARRINHO</button>
+            </div>
+            <div>
+                <button (click)='login()'>LOGIN</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="produtos">
+            <div *ngFor="let teste of listaProduto;" class="produto">
+                <div class="infos">
+                    <h2> {{teste.nome}} </h2>
+                    <p>R$ {{teste.preco}}</p>
+                    <img src="./assets/pngegg.png" style="width: 110px; height: 20px;">
+                    <button>Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="titulo">bam</div>
+            <div class="icons">
+                <img src="./assets/facebook.png" style="height: 40px; width: 40px;">
+                <img src="./assets/instagram.png" style="height: 40px; width: 40px;">
+                <img src="./assets/twitter.png" style="height: 40px; width: 40px;">
+            </div>
+        </div>
+        <div class="container2">
+            <p>@ 2022 Copyright - Bruna Mafra</p>
+        </div>
+    </footer>
+</body>
