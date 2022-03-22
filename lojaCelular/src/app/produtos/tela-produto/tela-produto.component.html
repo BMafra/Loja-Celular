@@ -7,6 +7,9 @@
         <div class="logo">
             <img src="./assets/logo.png" style="height: 230px; width: 250px;">
         </div>
+        <div class="pag">
+            produto
+        </div>
         <div class="filtro">
             <input type="text" placeholder="Pesquise aqui!">
         </div>
@@ -20,15 +23,9 @@
         </div>
     </header>
     <main>
-        <div class="produtos">
-            <div *ngFor="let teste of listaProduto;" class="produto">
-                <div class="infos">
-                    <h2> {{teste.nome}} </h2>
-                    <p>R$ {{teste.preco}}</p>
-                    <img src="./assets/pngegg.png" style="width: 110px; height: 20px;">
-                    <button>Carrinho</button>
-                </div>
-            </div>
+        <div class="produto">
+            {{index}} {{nome}} {{valor}} {{marca}}
+            <button (click)='voltarHome()'>VOLTAR</button>
         </div>
     </main>
     <footer>

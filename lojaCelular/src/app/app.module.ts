@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: TelaLoginComponent },
   { path: 'carrinho', component: CarrinhoComponent},
-  { path: 'produto', component: TelaProdutoComponent}
+  { path: 'produto/:id_produto', component: TelaProdutoComponent}
 ]
 
 

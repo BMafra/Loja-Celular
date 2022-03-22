@@ -55,11 +55,11 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
     console.log('Erro na criação da tabela ENDERECO');
 });
 
-// database(`INSERT INTO PRODUTO VALUES (null, 'iPhone 13 Pro Max', 9450.10, 2), (null, 'iPhone SE', 2700.00, 2),
-// (null, 'K41s', 850.15, 1), (null, 'K61', 1250.30, 1),
-// (null, 'E7', 899.90, 3), (null, 'G20', 1200.45, 3), 
-// (null, 'S21', 3599.10, 4), (null, 'Note 20', 5118.90, 4),
-// (null, 'MI 11', 3100, 5), (null, 'Redmi Note 8', 1500.90, 5)
+// database(`INSERT INTO PRODUTO VALUES (1, 'iPhone 13 Pro Max', 9450.10, 2), (2, 'iPhone SE', 2700.00, 2),
+// (3, 'K41s', 850.15, 1), (4, 'K61', 1250.30, 1),
+// (5, 'E7', 899.90, 3), (6, 'G20', 1200.45, 3), 
+// (7, 'S21', 3599.10, 4), (8, 'Note 20', 5118.90, 4),
+// (9, 'MI 11', 3100, 5), (10, 'Redmi Note 8', 1500.90, 5)
 // `).then(result => {
 //     console.log('DADOS NA TABELA PRODUTO INSERIDOS');
 // }).catch(erro => {
@@ -83,8 +83,8 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
 //     console.log('ERRO AO COLOCAR OS DADOS NA TABELA PESSOA');
 // });
 
-// database(`INSERT INTO MARCA VALUES (null, 'LG'), (null, 'Apple'), (null, 'Motorola'), 
-// (null, 'Samsung'), (null, 'Xiaomi')
+// database(`INSERT INTO MARCA VALUES (1, 'LG'), (2, 'Apple'), (3, 'Motorola'), 
+// (4, 'Samsung'), (5, 'Xiaomi')
 // `).then(result => {
 //     console.log('DADOS NA TABELA MARCA INSERIDOS');
 // }).catch(erro => {

@@ -46,9 +46,7 @@ export class HomeComponent implements OnInit {
   }
 
   verProduto(i){
-    this.router.navigate(['produto']);
-
-    
+    this.router.navigate(['produto', i]);
   }
 
 }

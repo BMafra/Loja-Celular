@@ -23,6 +23,12 @@ header {
     text-align: center;
 }
 
+.pag {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Graffiti font';
+}
+
 .botoes {
     display: flex;
 }

@@ -7,6 +7,9 @@
         <div class="logo">
             <img src="./assets/logo.png" style="height: 230px; width: 250px;">
         </div>
+        <div class="pag">
+            home
+        </div>
         <div class="filtro">
             <input type="text" placeholder="Pesquise aqui!">
         </div>
@@ -21,12 +24,15 @@
     </header>
     <main>
         <div class="produtos">
-            <div *ngFor="let teste of listaProduto; let i of index" (click)="verProduto(i)" class="produto">
+            <div *ngFor="let teste of listaProduto; let i = index" (click)="verProduto(i + 1)" class="produto">
                 <div class="infos">
                     <h2> {{teste.nome}} </h2>
                     <p>R$ {{teste.preco}}</p>
                     <img src="./assets/pngegg.png" style="width: 110px; height: 20px;">
-                    <button>Carrinho</button>
+                    <button (click)='carrinho()'>Carrinho</button>
+                </div>
+                <div>
+                    {{i}}
                 </div>
             </div>
         </div>
