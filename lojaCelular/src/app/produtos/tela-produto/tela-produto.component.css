@@ -51,11 +51,29 @@ main {
 }
 
 .produto {
+    display: flex;
     width: 70vw;
     height: 54vh;
     margin: 20px;
     border-radius: 20px;
     background-color: #ffffff;
+}
+
+.divImagem {
+    width: 35%;
+    height: 100%;
+    border-right: solid 1px black;
+}
+
+.infosProdutos {
+    padding: 10px;
+    flex-direction: column;
+}
+
+.modelo {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'candara';
 }
 
 footer {

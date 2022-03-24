@@ -15,7 +15,7 @@
         </div>
         <div class="botoes">
             <div>
-                <button (click)='carrinho()'>CARRINHO</button>
+                <button (click)='voltarHome()'><img src="./assets/voltar.png" style="width: 20px;"></button>
             </div>
             <div>
                 <button (click)='login()'>LOGIN</button>
@@ -24,8 +24,16 @@
     </header>
     <main>
         <div class="produto">
-            {{index}} {{nome}} {{valor}} {{marca}}
-            <button (click)='voltarHome()'>VOLTAR</button>
+            <div class="divImagem">
+
+            </div>
+            <div class="infosProdutos">
+                <p class="modelo">{{nome}}</p>
+                <p>ID: {{index}}</p>
+                <p>Marca: {{marca}}</p>
+                <p>R$ {{valor}}</p>
+                <button (click)='carrinho()'>CARRINHO</button>
+            </div>
         </div>
     </main>
     <footer>
