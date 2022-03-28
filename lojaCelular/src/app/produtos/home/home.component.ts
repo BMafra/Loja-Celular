@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   nome = ''
   preco = '';
+  imagem = '';
 
   listaProduto = [];
  
@@ -24,11 +25,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.usuariosService.buscarProdutos()
     .then((resultado: any) => {
-      console.log("WRGESVDAXZ",resultado)
       for(let i = 0; i < resultado.length; i++){
         let teste = {
           nome: resultado[i].NOME,
-          preco: resultado[i].PRECO
+          preco: resultado[i].PRECO,
+          imagem: resultado[i].URL
         }
         console.log("teste: ", teste)
         this.listaProduto.push(teste);

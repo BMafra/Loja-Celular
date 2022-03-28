@@ -18,6 +18,7 @@ export class TelaProdutoComponent implements OnInit {
   nome
   valor
   marca 
+  imagem
 
   ngOnInit() {
     this.index = this.router.url.substring(this.router.url.length - 1)
@@ -29,6 +30,7 @@ export class TelaProdutoComponent implements OnInit {
         if(valor.CODIGO == this.index){
           this.nome = valor.NOME
           this.valor = valor.PRECO
+          this.imagem = valor.URL
           this.marca = valor.MARCA_CODIGO
         }
       })

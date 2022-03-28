@@ -25,14 +25,13 @@
     <main>
         <div class="produtos">
             <div *ngFor="let teste of listaProduto; let i = index" (click)="verProduto(i + 1)" class="produto">
-                <div class="infos">
-                    <h2> {{teste.nome}} </h2>
-                    <p>R$ {{teste.preco}}</p>
-                    <img src="./assets/pngegg.png" style="width: 110px; height: 20px;">
-                    <button (click)='carrinho()'>Carrinho</button>
+                <div class="imagem">
+                    <img src="{{teste.imagem}}" style="width: 190px;" alt="">
                 </div>
-                <div>
-                    {{i}}
+                <div class="infos">
+                    <h3> {{teste.nome}} </h3>
+                    <p>R$ {{teste.preco}}</p>
+                    <button (click)='carrinho()'>Carrinho</button>
                 </div>
             </div>
         </div>
