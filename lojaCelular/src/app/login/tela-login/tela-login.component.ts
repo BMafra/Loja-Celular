@@ -41,21 +41,28 @@ export class TelaLoginComponent implements OnInit {
 
   // }
 
+  verifica = 0;
+
   login() {
     this.usuariosService.buscarClientes()
       .then((resultado: any) => {
         for (let i = 0; i < resultado.length; i++) {
           if (resultado[i].SENHA === this.password && resultado[i].USER === this.user) {
             this.router.navigate(['carrinho']);
+            break;
+          } 
+          if (i == resultado.length - 1){
+            alert("Algo errado. Tente novamente!");
           }
         }
       }).catch(erro => {
         console.log('ERRO AO BUSCAR USUARIOS: ', erro);
-      })
-
+      })   
   }
+
   voltarHome() {
     this.router.navigate(['']);
   }
+
 
 }
