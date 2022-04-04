@@ -40,6 +40,7 @@ export class TelaProdutoComponent implements OnInit {
 
   carrinho(){
     this.router.navigate(['carrinho']);
+    
   }
 
   login(){

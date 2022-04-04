@@ -35,6 +35,7 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     URL VARCHAR(100) NOT NULL,
     NOME VARCHAR(45) NOT NULL,
     PRECO DOUBLE NOT NULL,
+    CARRINHO DOUBLE NOT NULL,
     MARCA_CODIGO INT NOT NULL,
     FOREIGN KEY (MARCA_CODIGO) REFERENCES MARCA(CODIGO) ON UPDATE CASCADE ON DELETE CASCADE
 )`).then(result => {
@@ -57,16 +58,16 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
 });
 
 // database(`INSERT INTO PRODUTO VALUES 
-// (1, 'https://www.fastshop.com.br/wcsstore/FastShopCAS/imagens/_AE_Apple/AEMLL63BZAGFT/AEMLL63BZAGFT_PRD_1500_1.jpg', 'iPhone 13 Pro Max', 9450.10, 2), 
-// (2, 'https://a-static.mlcdn.com.br/618x463/iphone-se-apple-64gb-branco-47-ios/magazineluiza/155582500/a1d4194bbb9119e2819f67472413a585.jpg', 'iPhone SE', 2700.00, 2),
-// (3, 'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-k41s-6-5-32gb-lg_329814.jpg', 'K41s', 850.15, 1), 
-// (4, 'https://images.kabum.com.br/produtos/fotos/113757/smartphone-lg-k61-128gb-48mp-tela-6-53-branco-lm-q630baw_1594301289_original.jpg', 'K61', 1250.30, 1),
-// (5, 'https://images.kabum.com.br/produtos/fotos/154259/smartphone-motorola-moto-e7-64gb-ram-4gb-octa-core-camera-48mp-4000mah-cinza-metalico-palv0031br_1616608846_gg.jpg', 'E7', 899.90, 3), 
-// (6, 'https://imgs.extra.com.br/55022929/1xg.jpg?imwidth=292', 'G20', 1200.45, 3), 
-// (7, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9xDuHA35p60bq5mF6yrmqaEPrBAmY3ANDjw&usqp=CAU', 'S21', 3599.10, 4), 
-// (8, 'https://cdn11.bigcommerce.com/s-ss31ap/images/stencil/1280x1280/products/7612/36767/71mCOMFSAWL._AC_SL1500___22411.1605251366.1280.1280__64163__56651.1630558685.jpg?c=2', 'Note 20', 5118.90, 4),
-// (9, 'https://http2.mlstatic.com/D_NQ_NP_888926-MLA46928568376_072021-O.jpg', 'MI 11', 3100, 5), 
-// (10,'https://http2.mlstatic.com/D_NQ_NP_847649-MLA48798662447_012022-O.jpg', 'Redmi Note 8', 1500.90, 5)
+// (1, 'https://www.fastshop.com.br/wcsstore/FastShopCAS/imagens/_AE_Apple/AEMLL63BZAGFT/AEMLL63BZAGFT_PRD_1500_1.jpg', 'iPhone 13 Pro Max', 9450.10, false, 2), 
+// (2, 'https://a-static.mlcdn.com.br/618x463/iphone-se-apple-64gb-branco-47-ios/magazineluiza/155582500/a1d4194bbb9119e2819f67472413a585.jpg', 'iPhone SE', 2700.00, false, 2),
+// (3, 'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-k41s-6-5-32gb-lg_329814.jpg', 'K41s', 850.15, false, 1), 
+// (4, 'https://images.kabum.com.br/produtos/fotos/113757/smartphone-lg-k61-128gb-48mp-tela-6-53-branco-lm-q630baw_1594301289_original.jpg', 'K61', 1250.30, false, 1),
+// (5, 'https://images.kabum.com.br/produtos/fotos/154259/smartphone-motorola-moto-e7-64gb-ram-4gb-octa-core-camera-48mp-4000mah-cinza-metalico-palv0031br_1616608846_gg.jpg', 'E7', 899.90, false, 3), 
+// (6, 'https://imgs.extra.com.br/55022929/1xg.jpg?imwidth=292', 'G20', 1200.45, false, 3), 
+// (7, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9xDuHA35p60bq5mF6yrmqaEPrBAmY3ANDjw&usqp=CAU', 'S21', 3599.10, false, 4), 
+// (8, 'https://cdn11.bigcommerce.com/s-ss31ap/images/stencil/1280x1280/products/7612/36767/71mCOMFSAWL._AC_SL1500___22411.1605251366.1280.1280__64163__56651.1630558685.jpg?c=2', 'Note 20', 5118.90, false, 4),
+// (9, 'https://http2.mlstatic.com/D_NQ_NP_888926-MLA46928568376_072021-O.jpg', 'MI 11', 3100, false, 5), 
+// (10,'https://http2.mlstatic.com/D_NQ_NP_847649-MLA48798662447_012022-O.jpg', 'Redmi Note 8', 1500.90, false, 5)
 // `).then(result => {
 //     console.log('DADOS NA TABELA PRODUTO INSERIDOS');
 // }).catch(erro => {
