@@ -23,6 +23,22 @@ export class UsuariosService {
     })
   }
 
+  buscarMarca (){
+    return new Promise((resolvido, rejeitado)=> {
+
+      fetch('/api/marca', {
+        method:'POST', 
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+
+    })
+  }
+  
+
   buscarProdutos(){
     return new Promise((resolve, rejeitado) => {
       fetch('/api/ver_produtos', {
@@ -30,6 +46,34 @@ export class UsuariosService {
         headers: {
           'Content-type': 'application/json'
         }
+      }).then (resultado => resultado.json())
+        .then(resolvido => resolve(resolvido))
+        .catch(rejeitado);
+    })
+  }
+
+  adicionarCarrinho(id){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/adicionar_carrinho', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({id})
+      }).then (resultado => resultado.json())
+        .then(resolvido => resolve(resolvido))
+        .catch(rejeitado);
+    })
+  }
+
+  removerCarrinho(id){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/remover_carrinho', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({id})
       }).then (resultado => resultado.json())
         .then(resolvido => resolve(resolvido))
         .catch(rejeitado);

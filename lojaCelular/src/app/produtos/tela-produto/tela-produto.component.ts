@@ -17,37 +17,46 @@ export class TelaProdutoComponent implements OnInit {
   index
   nome
   valor
-  marca 
+  marca
   imagem
 
   ngOnInit() {
     this.index = this.router.url.substring(this.router.url.length - 1)
 
     this.usuariosService.buscarProdutos()
-    .then((resultado : any) => {
-      resultado.find(valor => {
-        console.log(valor)
-        if(valor.CODIGO == this.index){
-          this.nome = valor.NOME
-          this.valor = valor.PRECO
-          this.imagem = valor.URL
-          this.marca = valor.MARCA_CODIGO
-        }
+      .then((resultado: any) => {
+        resultado.find(valor => {
+          if (valor.CODIGO == this.index) {
+            this.usuariosService.buscarMarca()
+              .then((resultadoMarca: any) => {
+                resultadoMarca.find(valorMarca => {
+                  if (valorMarca.CODIGO == valor.MARCA_CODIGO) {
+                    console.log(valor)
+                    if (valor.CODIGO == this.index) {
+                      this.nome = valor.NOME
+                      this.valor = valor.PRECO
+                      this.imagem = valor.URL
+                      this.marca = valorMarca.NOME
+                    }
+                  }
+                })
+              })
+          }
+        })
       })
-    })
 
   }
 
-  carrinho(){
+  carrinho() {
     this.router.navigate(['carrinho']);
-    
+
   }
 
-  login(){
+  login() {
     this.router.navigate(['login']);
   }
 
-  voltarHome(){
+  voltarHome() {
     this.router.navigate(['']);
   }
 

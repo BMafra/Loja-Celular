@@ -38,6 +38,11 @@ export class HomeComponent implements OnInit {
 
   }
 
+  adicionarCarrinho(id){
+    this.usuariosService.adicionarCarrinho(id)
+    this.router.navigate(['carrinho']);
+  }
+
   carrinho(){
     this.router.navigate(['carrinho']);
   }

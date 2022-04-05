@@ -8,6 +8,35 @@ inserirRota('/ver_produtos', function(dados, respostas) {
         })
 })
 
+inserirRota('/marca', function(dados, respostas) {
+    database('SELECT * FROM marca')
+        .then(result => {
+            respostas(result)
+        }).catch(erro => {
+            console.log('ERRO AO BUSCAR PRODUTO!')
+            respostas({ erro })
+        })
+})
+
+inserirRota('/adicionar_carrinho', function(dados, respostas) {
+    database(`UPDATE produto set CARRINHO = 1 where codigo = "${dados.id}"`)
+        .then(result => {
+            respostas(result)
+        }).catch(erro => {
+            console.log('ERRO AO BUSCAR PRODUTO!')
+            respostas({ erro })
+        })
+})
+
+inserirRota('/remover_carrinho', function(dados, respostas) {
+    database(`UPDATE produto set CARRINHO = 0 where codigo = "${dados.id}"`)
+        .then(result => {
+            respostas(result)
+        }).catch(erro => {
+            console.log('ERRO AO BUSCAR PRODUTO!')
+            respostas({ erro })
+        })
+})
 
 
 // inserirRota('/login', function(dados, resposta) {
