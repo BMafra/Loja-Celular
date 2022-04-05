@@ -44,6 +44,33 @@ header {
     margin-right: 40px;
 }
 
+main {
+    background-color: rgb(241, 241, 241);
+}
+
+.produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.produto {
+    width: 30vw;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+.imagem {
+    padding: 5px;
+    width: 300px;
+    height: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: solid 1px black; */
+}
+
 footer {
     background-color: #826fff62;
     width: 100%;

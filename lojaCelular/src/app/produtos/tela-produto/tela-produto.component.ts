@@ -31,20 +31,16 @@ export class TelaProdutoComponent implements OnInit {
               .then((resultadoMarca: any) => {
                 resultadoMarca.find(valorMarca => {
                   if (valorMarca.CODIGO == valor.MARCA_CODIGO) {
-                    console.log(valor)
-                    if (valor.CODIGO == this.index) {
-                      this.nome = valor.NOME
-                      this.valor = valor.PRECO
-                      this.imagem = valor.URL
-                      this.marca = valorMarca.NOME
-                    }
+                    this.nome = valor.NOME
+                    this.valor = valor.PRECO
+                    this.imagem = valor.URL
+                    this.marca = valorMarca.NOME
                   }
                 })
               })
           }
         })
       })
-
   }
 
   carrinho() {

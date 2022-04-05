@@ -21,11 +21,10 @@
         </div>
     </header>
     <main>
-
         <div class="produtos">
             <div *ngFor="let teste of lista;" class="produto">
                 <div class="imagem">
-                    <img src="{{teste.imagem}}" style="width: 190px;" alt="">
+                    <img src="{{teste.imagem}}" style="width: 300px; height: 200px;">
                 </div>
                 <div class="infos">
                     <h3> {{teste.nome}} </h3>
@@ -34,7 +33,6 @@
             </div>
             <button>COMPRAR</button>
         </div>
-
     </main>
     <footer>
         <div class="container1 ">
