@@ -24,25 +24,40 @@
         <div class="produtos">
             <div *ngFor="let teste of lista;" class="produto">
                 <div class="imagem">
-                    <img src="{{teste.imagem}}" style="width: 300px; height: 200px;">
+                    <img src="{{teste.imagem}}" style="width: 290px">
                 </div>
+
                 <div class="infos">
                     <h3> {{teste.nome}} </h3>
                     <p>R$ {{teste.preco}}</p>
                 </div>
+
+                <div class="icone">
+                    <img src="assets/cancelar.png" style="width: 50%">
+                </div>
             </div>
+        </div>
+
+        <div class="informacoesProduto">
+            <div *ngFor="let teste of lista;" class="infosProduto">
+                {{teste.preco}}
+            </div>
+
             <button>COMPRAR</button>
         </div>
     </main>
+
     <footer>
         <div class="container1 ">
             <div class="titulo ">bam</div>
+
             <div class="icons ">
                 <img src="./assets/facebook.png " style="height: 40px; width: 40px; ">
                 <img src="./assets/instagram.png " style="height: 40px; width: 40px; ">
                 <img src="./assets/twitter.png " style="height: 40px; width: 40px; ">
             </div>
         </div>
+
         <div class="container2 ">
             <p>@ 2022 Copyright - Bruna Mafra</p>
         </div>

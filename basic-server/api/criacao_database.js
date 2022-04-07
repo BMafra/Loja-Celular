@@ -58,16 +58,16 @@ database(`CREATE TABLE IF NOT EXISTS ENDERECO (
 });
 
 // database(`INSERT INTO PRODUTO VALUES 
-// (1, 'https://www.fastshop.com.br/wcsstore/FastShopCAS/imagens/_AE_Apple/AEMLL63BZAGFT/AEMLL63BZAGFT_PRD_1500_1.jpg', 'iPhone 13 Pro Max', 9450.10, false, 2), 
-// (2, 'https://a-static.mlcdn.com.br/618x463/iphone-se-apple-64gb-branco-47-ios/magazineluiza/155582500/a1d4194bbb9119e2819f67472413a585.jpg', 'iPhone SE', 2700.00, false, 2),
-// (3, 'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-k41s-6-5-32gb-lg_329814.jpg', 'K41s', 850.15, false, 1), 
-// (4, 'https://images.kabum.com.br/produtos/fotos/113757/smartphone-lg-k61-128gb-48mp-tela-6-53-branco-lm-q630baw_1594301289_original.jpg', 'K61', 1250.30, false, 1),
-// (5, 'https://images.kabum.com.br/produtos/fotos/154259/smartphone-motorola-moto-e7-64gb-ram-4gb-octa-core-camera-48mp-4000mah-cinza-metalico-palv0031br_1616608846_gg.jpg', 'E7', 899.90, false, 3), 
-// (6, 'https://imgs.extra.com.br/55022929/1xg.jpg?imwidth=292', 'G20', 1200.45, false, 3), 
-// (7, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9xDuHA35p60bq5mF6yrmqaEPrBAmY3ANDjw&usqp=CAU', 'S21', 3599.10, false, 4), 
-// (8, 'https://cdn11.bigcommerce.com/s-ss31ap/images/stencil/1280x1280/products/7612/36767/71mCOMFSAWL._AC_SL1500___22411.1605251366.1280.1280__64163__56651.1630558685.jpg?c=2', 'Note 20', 5118.90, false, 4),
-// (9, 'https://http2.mlstatic.com/D_NQ_NP_888926-MLA46928568376_072021-O.jpg', 'MI 11', 3100, false, 5), 
-// (10,'https://http2.mlstatic.com/D_NQ_NP_847649-MLA48798662447_012022-O.jpg', 'Redmi Note 8', 1500.90, false, 5)
+// (1, 'https://images-americanas.b2w.io/produtos/01/00/img/3923260/3/3923260353_1GG.jpg', 'iPhone 13 Pro Max', 9450.10, false, 2), 
+// (2, 'https://images-americanas.b2w.io/produtos/01/00/img/2449596/0/2449596051_1GG.jpg', 'iPhone SE', 2700.00, false, 2),
+// (3, 'https://images-americanas.b2w.io/produtos/01/00/img/1674059/9/1674059957_1GG.jpg', 'K41s', 850.15, false, 1), 
+// (4, 'https://images-americanas.b2w.io/produtos/01/00/img/1674892/8/1674892869_1GG.jpg', 'K61', 1250.30, false, 1),
+// (5, 'https://images-americanas.b2w.io/produtos/01/00/img/2626417/8/2626417861_1GG.jpg', 'E7', 899.90, false, 3), 
+// (6, 'https://images-americanas.b2w.io/produtos/01/00/img/4160810/2/4160810256_1GG.jpg', 'G20', 1200.45, false, 3), 
+// (7, 'https://images-americanas.b2w.io/produtos/01/00/img/2875240/4/2875240402_1GG.jpg', 'S21', 3599.10, false, 4), 
+// (8, 'https://images-americanas.b2w.io/produtos/01/00/img/4579620/3/4579620304_1GG.jpg', 'Note 20', 5118.90, false, 4),
+// (9, 'https://images-americanas.b2w.io/produtos/4796209132/imagens/celular-xiaomi-mi-11-lite-dual-sim-128gb-black-6gb-ram-gamer/4796209132_1_large.jpg', 'MI 11', 3100, false, 5), 
+// (10,'https://images-americanas.b2w.io/produtos/4522803417/imagens/xiaomi-redmi-note-8-dual-sim-64gb-moonlight-white-4gb-ram/4522803417_1_large.jpg', 'Redmi Note 8', 1500.90, false, 5)
 // `).then(result => {
 //     console.log('DADOS NA TABELA PRODUTO INSERIDOS');
 // }).catch(erro => {

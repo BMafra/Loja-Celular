@@ -25,7 +25,7 @@ export class CarrinhoComponent implements OnInit {
             nome: valor.NOME,
             valor: valor.VALOR,
             preco: valor.PRECO,
-            imagem: valor.IMAGEM,
+            imagem: valor.URL,
             marca: valor.MARCA
           }
           this.lista.push(produto) 
