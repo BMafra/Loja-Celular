@@ -1,7 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     width: 100vw;
     height: 100vh;
-    font-family: 'candara';
+    font-family: 'Papyrus';
 }
 
 header {
@@ -49,6 +54,7 @@ main {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(241, 241, 241);
+    padding: 10px;
 }
 
 .produtos {
@@ -56,13 +62,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45%;
-    box-sizing: border-box;
+    width: 40%;
+    height: auto;
 }
 
 .produto {
+    display: flex;
+    position: relative;
     padding: 1%;
-    width: 70%;
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
     margin: 1% 0;
     border-radius: 15px;
@@ -78,8 +87,7 @@ main {
 .icone {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 
@@ -89,27 +97,39 @@ main {
     height: auto;
 }
 
-.div-InfoProds {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    box-sizing: border-box;
-}
-
 .informacoesProduto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: #ffffff;
     border-radius: 15px;
-    width: 30%;
-    height: 60%;
-    /* margin: 20px; */
+    width: 40%;
+    height: 40vh;
+    padding: 20px;
     font-size: 20px;
+    font-weight: 500;
+}
+
+.frete {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 550;
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+}
+
+.resumo {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Papyrus';
+    margin: 10px 0 10px 0;
 }
 
 .informacoesProduto button {
     width: 130px;
     height: 40px;
+    margin: 10px 0 10px 0;
     background-color: #ffffff;
     border-radius: 5px;
     border: solid 2px #826fff9c;
@@ -146,6 +166,10 @@ footer {
     justify-content: center;
     height: 80%;
     width: 100%;
+}
+
+.icons img {
+    margin: 10px;
 }
 
 .container2 {
