@@ -82,18 +82,21 @@ main {
 
 .infos {
     margin: 10px;
+    width: 40%;
 }
 
 .icone {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    align-items: flex-start;
+    width: 10%;
     height: 100%;
+    top: 0;
 }
 
 .imagem {
     padding: 5px;
-    width: 300px;
+    width: 50%;
     height: auto;
 }
 
