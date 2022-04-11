@@ -7,19 +7,24 @@
         <div class="logo">
             <img src="./assets/logo.png" style="height: 230px; width: 250px;">
         </div>
+
         <div class="pag">carrinho</div>
+
         <div class="filtro">
             <input type="text" placeholder="Pesquise aqui!">
         </div>
+
         <div class="botoes">
             <div>
                 <button (click)='voltarHome()'><img src="./assets/voltar.png" style="width: 20px;"></button>
             </div>
+
             <div>
                 <button (click)='login()'>LOGIN</button>
             </div>
         </div>
     </header>
+
     <main>
         <div class="produtos">
             <div *ngFor="let teste of lista;" class="produto">
@@ -38,12 +43,14 @@
             </div>
         </div>
 
-        <div class="informacoesProduto">
-            <div *ngFor="let teste of lista;" class="infosProduto">
-                {{teste.preco}}
-            </div>
+        <div class="div-InfoProds">
+            <div class="informacoesProduto">
+                <div *ngFor="let teste of lista;" class="infosProduto">
+                    {{teste.preco}}
+                </div>
 
-            <button>COMPRAR</button>
+                <button>COMPRAR</button>
+            </div>
         </div>
     </main>
 

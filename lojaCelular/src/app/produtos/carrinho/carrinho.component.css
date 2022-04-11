@@ -45,21 +45,24 @@ header {
 }
 
 main {
-    background-color: rgb(241, 241, 241);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
 }
 
 .produtos {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    box-sizing: border-box;
 }
 
 .produto {
     padding: 1%;
-    width: 45%;
+    width: 70%;
     background-color: #ffffff;
     margin: 1% 0;
     border-radius: 15px;
@@ -86,12 +89,21 @@ main {
     height: auto;
 }
 
+.div-InfoProds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    box-sizing: border-box;
+}
+
 .informacoesProduto {
     background-color: #ffffff;
     border-radius: 15px;
     width: 30%;
     height: 60%;
-    margin: 20px;
+    /* margin: 20px; */
     font-size: 20px;
 }
 
