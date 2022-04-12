@@ -1,0 +1,55 @@
+main {
+    background-color: #826fff62;
+}
+
+.divConteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Graffiti font';
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputCliente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputEndereco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    outline: none;
+    background-color: #ffffff;
+}

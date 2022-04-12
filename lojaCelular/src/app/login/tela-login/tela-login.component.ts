@@ -64,5 +64,8 @@ export class TelaLoginComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  cadastro(){
+    this.router.navigate(['cadastro']);
+  }
 
 }

@@ -43,8 +43,8 @@ export class TelaProdutoComponent implements OnInit {
       })
   }
 
-  carrinho(id) {
-    this.usuariosService.adicionarCarrinho(id)
+  carrinho(index) {
+    this.usuariosService.adicionarCarrinho(index)
     this.router.navigate(['carrinho']);
 
   }

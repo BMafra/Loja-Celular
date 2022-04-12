@@ -26,12 +26,18 @@ export class CarrinhoComponent implements OnInit {
             valor: valor.VALOR,
             preco: valor.PRECO,
             imagem: valor.URL,
-            marca: valor.MARCA
+            marca: valor.MARCA,
+            id: valor.CODIGO
           }
           this.lista.push(produto) 
         }
       })
     })
+  }
+
+  removerCarrinho(id){
+    this.usuarioService.removerCarrinho(id);
+    document.location.reload();
   }
 
   voltarHome() {

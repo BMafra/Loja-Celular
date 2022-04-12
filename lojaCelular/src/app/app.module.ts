@@ -7,6 +7,7 @@ import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { CarrinhoComponent } from './produtos/carrinho/carrinho.component';
 import { HomeComponent } from './produtos/home/home.component';
 import { TelaProdutoComponent } from './produtos/tela-produto/tela-produto.component';
+import { CadastroComponent } from './produtos/cadastro/cadastro.component';
 
 // import {
 //   SocialLoginModule,
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: TelaLoginComponent },
   { path: 'carrinho', component: CarrinhoComponent},
-  { path: 'produto/:id_produto', component: TelaProdutoComponent}
+  { path: 'produto/:id_produto', component: TelaProdutoComponent},
+  { path: 'cadastro', component: CadastroComponent }
 ]
 
 
@@ -43,7 +45,8 @@ const routes: Routes = [
     TelaLoginComponent,
     CarrinhoComponent,
     HomeComponent,
-    TelaProdutoComponent
+    TelaProdutoComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
