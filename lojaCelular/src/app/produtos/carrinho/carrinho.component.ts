@@ -35,6 +35,10 @@ export class CarrinhoComponent implements OnInit {
     })
   }
 
+  modal(){
+    
+  }
+
   removerCarrinho(id){
     this.usuarioService.removerCarrinho(id);
     document.location.reload();
