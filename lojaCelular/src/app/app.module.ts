@@ -9,11 +9,11 @@ import { HomeComponent } from './produtos/home/home.component';
 import { TelaProdutoComponent } from './produtos/tela-produto/tela-produto.component';
 import { CadastroComponent } from './produtos/cadastro/cadastro.component';
 
-// import {
-//   SocialLoginModule,
-//   AuthServiceConfig,
-//   GoogleLoginProvider
-// } from "angular-6-social-login";
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+} from "angular-6-social-login-v2";
 
 
 const routes: Routes = [
@@ -25,17 +25,17 @@ const routes: Routes = [
 ]
 
 
-// export function getAuthServiceConfigs() {
-//   let config = new AuthServiceConfig(
-//     [
-//       {
-//         id: GoogleLoginProvider.PROVIDER_ID,
-//         provider: new GoogleLoginProvider("402231336047-9jsgeagvcoa8fqb6eled83fj2hnodt5d.apps.googleusercontent.com")
-//       },
-//     ]
-//   );
-//   return config;
-// }
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+    [
+      {
+        id: GoogleLoginProvider.PROVIDER_ID,
+        provider: new GoogleLoginProvider("402231336047-9jsgeagvcoa8fqb6eled83fj2hnodt5d.apps.googleusercontent.com")
+      },
+    ]
+  );
+  return config;
+}
 
 
 
@@ -52,10 +52,10 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    // SocialLoginModule
+    SocialLoginModule
   ],
   providers: [
-    // {provide: AuthServiceConfig, useFactory: getAuthServiceConfigs}
+    {provide: AuthServiceConfig, useFactory: getAuthServiceConfigs}
 ],
   bootstrap: [AppComponent]
 })

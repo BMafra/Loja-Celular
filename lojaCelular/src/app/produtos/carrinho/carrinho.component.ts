@@ -44,11 +44,13 @@ export class CarrinhoComponent implements OnInit {
 
   abrirModal(){
     const htmlElement: HTMLElement = this.modalComprar.nativeElement;
+    htmlElement.classList.remove('close')
     htmlElement.classList.add('open')
   }
 
   fecharModal(){
     const htmlElement2: HTMLElement = this.modalComprar.nativeElement;
+    htmlElement2.classList.remove('open')
     htmlElement2.classList.add('close')
   }
 

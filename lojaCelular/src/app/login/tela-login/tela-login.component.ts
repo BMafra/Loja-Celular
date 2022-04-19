@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router'
 import { UsuariosService } from '../../services/usuarios.service';
 
-// import {
-//   AuthService,
-//   GoogleLoginProvider
-// } from 'angular-6-social-login';
+import {
+  GoogleLoginProvider,
+  AuthService,
+} from "angular-6-social-login-v2";
 
 
 @Component({
@@ -18,7 +18,7 @@ export class TelaLoginComponent implements OnInit {
   constructor(
     private router: Router,
     private usuariosService: UsuariosService,
-    // private socialAuthService: AuthService
+    private socialAuthService: AuthService
   ) { }
 
   user = '';
@@ -26,20 +26,20 @@ export class TelaLoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  // public socialSignIn(socialPlatform : string) {
-  //   let socialPlatformProvider;
-  //   if(socialPlatform == "google"){
-  //     socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-  //   }
+  public socialSignIn(socialPlatform : string) {
+    let socialPlatformProvider; 
+    if(socialPlatform == "google"){
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    } 
     
-  //   this.socialAuthService.signIn(socialPlatformProvider).then(
-  //     (userData) => {
-  //       console.log(socialPlatform+" sign in data : " , userData);
-  //       this.router.navigate([''])
-  //     }
-  //   );
-
-  // }
+    
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        console.log(socialPlatform+" sign in data : " , userData);
+        this.voltarHome();
+      }
+    );
+  }
 
   verifica = 0;
 
