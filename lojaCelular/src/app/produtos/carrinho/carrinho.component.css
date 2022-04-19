@@ -154,22 +154,32 @@ main {
 .modalComprar {
     display: none;
     position: absolute;
-    height: 50vh;
-    width: 50vw;
-    background-color: #836FFF;
-    border-radius: 20px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.445);   
 }
 
 .modalComprar.open {
     display: grid;
+    top: 0;
+    left: 0;
     align-items: center;
     justify-content: center;
-    top: 25vh;
-    left: 25vw;
 }
 
 .modalComprar.close {
     display: none;
+}
+
+.modalPequeno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 20px;
+    background-color: #ffffff;   
 }
 
 footer {

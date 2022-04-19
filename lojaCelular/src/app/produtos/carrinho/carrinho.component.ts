@@ -48,10 +48,11 @@ export class CarrinhoComponent implements OnInit {
     htmlElement.classList.add('open')
   }
 
-  fecharModal(){
+  fecharModal(id){
     const htmlElement2: HTMLElement = this.modalComprar.nativeElement;
     htmlElement2.classList.remove('open')
     htmlElement2.classList.add('close')
+    this.router.navigate([""])
   }
 
   removerCarrinho(id){
