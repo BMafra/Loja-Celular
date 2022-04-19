@@ -11,7 +11,7 @@
             home
         </div>
         <div class="filtro">
-            <input type="text" placeholder="Pesquise aqui!">
+            <input type="text" [(ngModel)]="filtrar" (keyup)="filtro()" placeholder="Pesquise aqui!">
         </div>
         <div class="botoes">
             <div>

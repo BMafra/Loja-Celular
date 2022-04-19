@@ -9,12 +9,21 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class CadastroComponent implements OnInit {
 
+  user = "";
+  senha = "";
+
   constructor(
     private router: Router,
     private usuariosService: UsuariosService
   ) { }
 
   ngOnInit() {
+
+  }
+
+  cadastrar(){
+    this.usuariosService.cadastrar(this.user, this.senha)
+    this.voltarLogin();
   }
 
   voltarHome(){

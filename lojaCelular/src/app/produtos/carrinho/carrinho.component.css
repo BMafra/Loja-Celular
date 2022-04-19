@@ -151,6 +151,27 @@ main {
     font-weight: 700;
 }
 
+.modalComprar {
+    display: none;
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    background-color: #836FFF;
+    border-radius: 20px;
+}
+
+.modalComprar.open {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    top: 25vh;
+    left: 25vw;
+}
+
+.modalComprar.close {
+    display: none;
+}
+
 footer {
     background-color: #826fff62;
     width: 100%;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router'
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -9,12 +9,16 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class CarrinhoComponent implements OnInit {
 
+  @ViewChild('modal', {read: ElementRef})
+  private modalComprar: ElementRef
+
   constructor(
     private router: Router,
     private usuarioService: UsuariosService
   ) { }
 
     lista = []
+    valorTotal = 20 
 
   ngOnInit() {
     this.usuarioService.buscarProdutos()
@@ -32,11 +36,20 @@ export class CarrinhoComponent implements OnInit {
           this.lista.push(produto) 
         }
       })
+      for(let i = 0; i < this.lista.length; i++){
+        this.valorTotal += this.lista[i].preco;
+      } 
     })
   }
 
-  modal(){
-    
+  abrirModal(){
+    const htmlElement: HTMLElement = this.modalComprar.nativeElement;
+    htmlElement.classList.add('open')
+  }
+
+  fecharModal(){
+    const htmlElement2: HTMLElement = this.modalComprar.nativeElement;
+    htmlElement2.classList.add('close')
   }
 
   removerCarrinho(id){

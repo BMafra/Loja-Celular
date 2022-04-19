@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from '@angular/core/src/render3/instructions';
 import { Routes, RouterModule, Router } from '@angular/router'
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -14,8 +15,10 @@ export class HomeComponent implements OnInit {
   nome = ''
   preco = '';
   imagem = '';
+  filtrar = "";
 
   listaProduto = [];
+  listaFiltro = [];
  
   constructor(
     private router: Router,
@@ -35,7 +38,12 @@ export class HomeComponent implements OnInit {
         this.listaProduto.push(teste);
       }
     })
+    this.listaFiltro = this.listaProduto;
+  }
 
+  filtro(){
+    this.listaProduto = this.listaFiltro;
+    this.listaProduto = this.listaProduto.filter(element => element.nome.toString().startsWith(this.filtrar))
   }
 
   adicionarCarrinho(id){

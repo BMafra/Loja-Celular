@@ -11,8 +11,8 @@
             <div class="inputCliente">
                 <input type="text" placeholder="Nome">
                 <input type="text" placeholder="E-mail">
-                <input type="text" placeholder="User">
-                <input type="text" placeholder="Senha">
+                <input type="text" placeholder="User" [(ngModel)]="user">
+                <input type="text" placeholder="Senha" [(ngModel)]="senha">
             </div>
 
             <div class="inputEndereco">
@@ -24,7 +24,7 @@
                 <input type="text" placeholder="Número">
             </div>
         </div>
-        <button (click)="voltarHome()">CADASTRAR</button>
+        <button (click)="cadastrar()">CADASTRAR</button>
         <button (click)="voltarLogin()">VOLTAR</button>
     </div>
     <footer>

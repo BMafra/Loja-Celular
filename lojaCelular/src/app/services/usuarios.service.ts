@@ -80,5 +80,19 @@ export class UsuariosService {
     })
   }
 
+  cadastrar(USER, SENHA){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/cadastrar', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({USER, SENHA})
+      }).then (resultado => resultado.json())
+        .then(resolvido => resolve(resolvido))
+        .catch(rejeitado);
+    })
+  }
+
 
 }

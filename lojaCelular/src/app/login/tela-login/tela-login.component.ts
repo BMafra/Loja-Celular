@@ -46,6 +46,7 @@ export class TelaLoginComponent implements OnInit {
   login() {
     this.usuariosService.buscarClientes()
       .then((resultado: any) => {
+        console.log(resultado)
         for (let i = 0; i < resultado.length; i++) {
           if (resultado[i].SENHA === this.password && resultado[i].USER === this.user) {
             this.router.navigate(['carrinho']);
