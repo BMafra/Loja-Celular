@@ -80,17 +80,44 @@ export class UsuariosService {
     })
   }
 
-  cadastrar(USER, SENHA){
+  cadastrar(NOME, USER, EMAIL, SENHA, CODIGO_ENDERECO){
     return new Promise((resolve, rejeitado) => {
       fetch('/api/cadastrar', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
         },
-        body: JSON.stringify({USER, SENHA})
+        body: JSON.stringify({NOME, USER, EMAIL, SENHA, CODIGO_ENDERECO})
       }).then (resultado => resultado.json())
         .then(resolvido => resolve(resolvido))
         .catch(rejeitado);
+    })
+  }
+
+  endereco(PAIS, ESTADO, CIDADE, BAIRRO, NUMERO){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/endereco', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({PAIS, ESTADO, CIDADE, BAIRRO, NUMERO})
+      }).then(resultado => resultado.json())
+      .then(resolvido => resolve(resolvido))
+      .catch(rejeitado);
+    })
+  }
+
+  checarEndereco(){
+    return new Promise((resolve, rejeitado) => {
+      fetch('/api/endereco_listar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido => resolve(resolvido))
+      .catch(rejeitado);
     })
   }
 

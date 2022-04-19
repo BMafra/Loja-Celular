@@ -39,7 +39,8 @@ inserirRota('/remover_carrinho', function(dados, respostas) {
 })
 
 inserirRota('/cadastrar', function(dados, respostas) {
-    database(`INSERT INTO cliente VALUES(null, "${dados.USER}", "${dados.SENHA}")`)
+    database(`INSERT INTO cliente VALUES(null, "${dados.NOME}", "${dados.USER}", "${dados.EMAIL}", "${dados.SENHA}", 
+    "${dados.CODIGO_ENDERECO}")`)
         .then(result => {
             respostas(result)
         }).catch(erro => {
@@ -60,4 +61,30 @@ inserirRota('/cliente', function(dados, resposta) {
             resposta({ message: 'Erro ao inserir o usuário!' });
         });
 
+});
+
+
+inserirRota("/endereco", function(dados, resposta) {
+    database(
+            `INSERT INTO ENDERECO VALUES(null, "${dados.PAIS}", "${dados.ESTADO}", "${dados.CIDADE}", "${dados.BAIRRO}", "${dados.NUMERO}")`
+        )
+        .then((result) => {
+            resposta(result);
+        })
+        .catch((erro) => {
+            console.log("Deu ruim");
+            resposta({ erro });
+        });
+});
+
+inserirRota("/endereco_listar", function(dados, resposta) {
+    console.log(dados);
+    database(`SELECT * FROM ENDERECO`)
+        .then((result) => {
+            console.log("Listado");
+            resposta(result);
+        })
+        .catch((erro) => {
+            resposta({ erro });
+        });
 });

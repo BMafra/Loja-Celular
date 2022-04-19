@@ -9,22 +9,21 @@
         </div>
         <div class="container">
             <div class="inputCliente">
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="Nome" [(ngModel)]="nome">
+                <input type="text" placeholder="E-mail" [(ngModel)]="email">
                 <input type="text" placeholder="User" [(ngModel)]="user">
                 <input type="text" placeholder="Senha" [(ngModel)]="senha">
             </div>
 
             <div class="inputEndereco">
-                <input type="text" placeholder="CEP">
-                <input type="text" placeholder="Estado">
-                <input type="text" placeholder="Cidade">
-                <input type="text" placeholder="Bairro">
-                <input type="text" placeholder="Rua">
-                <input type="text" placeholder="Número">
+                <input type="text" placeholder="Estado" [(ngModel)]="estado">
+                <input type="text" placeholder="Cidade" [(ngModel)]="cidade">
+                <input type="text" placeholder="Bairro" [(ngModel)]="bairro">
+                <input type="text" placeholder="Rua" [(ngModel)]="rua">
+                <input type="text" placeholder="Número" [(ngModel)]="numero">
             </div>
         </div>
-        <button (click)="cadastrar()">CADASTRAR</button>
+        <button (click)="cadastro()">CADASTRAR</button>
         <button (click)="voltarLogin()">VOLTAR</button>
     </div>
     <footer>
