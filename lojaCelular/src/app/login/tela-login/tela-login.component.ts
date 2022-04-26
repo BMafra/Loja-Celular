@@ -31,8 +31,7 @@ export class TelaLoginComponent implements OnInit {
     if(socialPlatform == "google"){
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     } 
-    
-    
+
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);

@@ -120,6 +120,4 @@ export class UsuariosService {
       .catch(rejeitado);
     })
   }
-
-
 }
